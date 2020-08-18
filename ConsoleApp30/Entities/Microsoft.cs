@@ -26,7 +26,7 @@ namespace ConsoleApp30
         {
             return
                     Nome +
-                   " Espaço em Disco : " +
+                   "Espaço em Disco : " +
                    Armazenamento;
         }
 
