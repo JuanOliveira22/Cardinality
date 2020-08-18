@@ -7,36 +7,39 @@ namespace ConsoleApp30
     {
         static void Main(string[] args)
         {
-            Platafora platafora = new Platafora();
+            Microsoft microsoft = new Microsoft();
+            Nintendo nintendo = new Nintendo();
+            Playstation playstation = new Playstation();
             Jogos jogos = new Jogos();
 
-            jogos.Plataform = new List<Platafora>();
-            platafora.Joguinhos = new List<Jogos>();
+            jogos.PlataformaN = new List<Nintendo>();
+            jogos.PlataformaM = new List<Microsoft>();
+            jogos.PlataformaP = new List<Playstation>();
+          
 
-            Console.Write("Informe quantos registros : ");
-            int n = int.Parse(Console.ReadLine());
-            for (int i = 0; i < n; i++)
+            Console.Write("Informe a plataforma desejada : (N/M/P) (Nintendo/Microsoft/Playstation): ");
+            char n = char.Parse(Console.ReadLine());
+
+            if (n == 'M' || n == 'm')
             {
+                Console.WriteLine("Informe a quantidade de Registros : ");
+                int m = int.Parse(Console.ReadLine());
+                for (int i = 0; i < m; i++)
+                {
+                    int p = i + 1;
+                    Console.Write($"Registro #{p} ");
+                    Console.Write("Informe o nome : ");
+                    string nome = Console.ReadLine();
+                    Console.Write("Informe o espaço em disco :");
+                    int armazenamento = int.Parse(Console.ReadLine());
+                   
 
-                Console.WriteLine("Entre com a Plataforma : ");
-                string plataforma = Console.ReadLine();
-                Console.WriteLine("Entre com o jogo : ");
-                string jogo = Console.ReadLine();
-                
-
-                jogos.Plataform.Add(new Platafora(plataforma));
-                platafora.Joguinhos.Add(new Jogos(jogo));
-
-               
-
-
+                    jogos.PlataformaM.Add(new Microsoft(nome,armazenamento));
+                }
             }
-            for (int j = 0; j < n; j++)
-            {
-                Console.WriteLine(platafora.Joguinhos[j].Jogo + " é da plataforma : " + jogos.Plataform[j].Plataforma);
-        
-            }
-           
+
+
+            Console.WriteLine(jogos.PlataformaM[1].Nome);
 
         }
     }

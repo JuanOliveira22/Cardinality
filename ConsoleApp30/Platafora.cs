@@ -4,10 +4,10 @@ using System.Text;
 
 namespace ConsoleApp30
 {
-    class Platafora
+    class Platafora 
     {
-        public string Plataforma { get; set;}
-        public List<Jogos> Joguinhos { get; set; }
+        public string Nome { get; set;}
+       
        
         
         public Platafora()
@@ -15,14 +15,11 @@ namespace ConsoleApp30
 
         }
        
-        public Platafora(string plataforma)
+        public Platafora(string nome)
         {
-            Plataforma = plataforma;
+            Nome = nome;
         }
 
-        public void Adicionar(string nome)
-        {
-            Joguinhos.Add(new Jogos(nome));
-        }
+
     }
 }
