@@ -20,10 +20,17 @@ namespace ConsoleApp30
             Armazenamento = armazenamento;
 
         }
-        
+        public override string TodosJogos()
+        {
+            return
+                    Nome +
+                   " Espaço em Disco : " +
+                   Armazenamento;
+        }
+
     }
-  
-    }
+
+}
 
 
 

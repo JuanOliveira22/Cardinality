@@ -19,7 +19,13 @@ namespace ConsoleApp30
         {
             Nome = nome;
         }
+        public virtual string TodosJogos()
+        {
+            return "Todos os Jogos : " +
+                     Nome;
+              
 
+        }
 
     }
 }

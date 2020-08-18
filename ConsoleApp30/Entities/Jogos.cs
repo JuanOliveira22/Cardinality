@@ -21,5 +21,25 @@ namespace ConsoleApp30
         public Jogos()
         {
         }
+
+            // FUNÇÕES
+        public int Calcular()
+        {
+           int m = PlataformaM.Count + PlataformaN.Count + PlataformaP.Count;
+            return m;
+        }
+
+      
+
+
+        public override string ToString()
+      
+        {
+            return "Foram criados um total de : "
+                  + Calcular()
+                  + " Registros " 
+
+                  ;
+        }
     }
 }
